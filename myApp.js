@@ -3,10 +3,10 @@ let mongoose = require('mongoose');
 
 let Person;
 
-mongoose.connect(
-  'mongodb+srv://gupter:<password>@cluster0.jtaccgx.mongodb.net/',
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
