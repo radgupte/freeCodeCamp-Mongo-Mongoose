@@ -1,8 +1,12 @@
 require('dotenv').config();
-
+let mongoose = require('mongoose');
 
 let Person;
 
+mongoose.connect(
+  'mongodb+srv://gupter:<password>@cluster0.jtaccgx.mongodb.net/',
+  { useNewUrlParser: true, useUnifiedTopology: true }
+);
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
@@ -24,7 +28,7 @@ const findPersonById = (personId, done) => {
 };
 
 const findEditThenSave = (personId, done) => {
-  const foodToAdd = "hamburger";
+  const foodToAdd = 'hamburger';
 
   done(null /*, data*/);
 };
@@ -40,13 +44,13 @@ const removeById = (personId, done) => {
 };
 
 const removeManyPeople = (done) => {
-  const nameToRemove = "Mary";
+  const nameToRemove = 'Mary';
 
   done(null /*, data*/);
 };
 
 const queryChain = (done) => {
-  const foodToSearch = "burrito";
+  const foodToSearch = 'burrito';
 
   done(null /*, data*/);
 };
